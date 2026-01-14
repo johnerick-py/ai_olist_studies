@@ -1,5 +1,5 @@
 {
-  "config": "{\"version\":\"5.66\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY25SU12\",\"type\":2,\"version\":{\"visual\":\"2.5.0\",\"report\":\"3.1.0\",\"page\":\"2.3.0\"}}},\"activeSectionIndex\":0,\"defaultDrillFilterOtherVisuals\":true,\"linguisticSchemaSyncVersion\":2,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"queryLimitOption\":6,\"useEnhancedTooltips\":true,\"exportDataMode\":1,\"useDefaultAggregateDisplayName\":true},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}]}}",
+  "config": "{\"version\":\"5.66\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY25SU12\",\"type\":2,\"version\":{\"visual\":\"2.5.0\",\"report\":\"3.1.0\",\"page\":\"2.3.0\"}}},\"activeSectionIndex\":0}",
   "layoutOptimization": 0,
   "resourcePackages": [
     {
@@ -19,382 +19,53 @@
   ],
   "sections": [
     {
-      "config": "{\"objects\":{\"background\":[{\"properties\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#f5f5f5'\"}}}}}]}}",
+      "config": "{}",
       "displayName": "Dashboard Executivo",
       "displayOption": 1,
       "filters": "[]",
       "height": 720.00,
       "name": "64f8ba5008d182089cb0",
-      "visualContainers": [
-        {
-          "config": "{\"name\":\"Total Revenue\",\"dataRoles\":[{\"name\":\"Values\",\"query\":{\"aggregateFunction\":\"Sum\",\"arg\":{\"expr\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Olist KPIs\"}},\"Property\":\"Total Revenue\"}}}}}],\"settings\":{\"margin\":{\"bottom\":0,\"left\":0,\"right\":0,\"top\":0}}}", 
-          "height": 120,
-          "width": 230,
-          "x": 10,
-          "y": 10,
-          "z": 1,
-          "id": "8d8e9f0a1b2c3d4e5f6g"
-        },
-        {
-          "config": "{\"name\":\"Total Orders\",\"dataRoles\":[{\"name\":\"Values\",\"query\":{\"aggregateFunction\":\"Sum\",\"arg\":{\"expr\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Olist KPIs\"}},\"Property\":\"Total Orders\"}}}}}],\"settings\":{\"margin\":{\"bottom\":0,\"left\":0,\"right\":0,\"top\":0}}}",
-          "height": 120,
-          "width": 230,
-          "x": 260,
-          "y": 10,
-          "z": 2,
-          "id": "9e9f0a1b2c3d4e5f6g7h"
-        },
-        {
-          "config": "{\"name\":\"Unique Customers\",\"dataRoles\":[{\"name\":\"Values\",\"query\":{\"aggregateFunction\":\"Sum\",\"arg\":{\"expr\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Olist KPIs\"}},\"Property\":\"Unique Customers\"}}}}}],\"settings\":{\"margin\":{\"bottom\":0,\"left\":0,\"right\":0,\"top\":0}}}",
-          "height": 120,
-          "width": 230,
-          "x": 510,
-          "y": 10,
-          "z": 3,
-          "id": "0f0g1h2i3j4k5l6m7n8o"
-        },
-        {
-          "config": "{\"name\":\"Gross Margin %\",\"dataRoles\":[{\"name\":\"Values\",\"query\":{\"aggregateFunction\":\"Sum\",\"arg\":{\"expr\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Olist KPIs\"}},\"Property\":\"Gross Margin %\"}}}}}],\"settings\":{\"margin\":{\"bottom\":0,\"left\":0,\"right\":0,\"top\":0}}}",
-          "height": 120,
-          "width": 230,
-          "x": 760,
-          "y": 10,
-          "z": 4,
-          "id": "1g1h2i3j4k5l6m7n8o9p"
-        },
-        {
-          "config": "{\"name\":\"Receita por Mês\",\"dataRoles\":[{\"name\":\"Axis\",\"query\":{\"arg\":{\"expr\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"dim_time\"}},\"Property\":\"date_key\"}}}}},{\"name\":\"Values\",\"query\":{\"aggregateFunction\":\"Sum\",\"arg\":{\"expr\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Olist KPIs\"}},\"Property\":\"Total Revenue\"}}}}}],\"settings\":{\"categoryAxis\":{\"showAxisTitle\":true},\"valueAxis\":{\"showAxisTitle\":true}}}",
-          "height": 250,
-          "width": 630,
-          "x": 10,
-          "y": 150,
-          "z": 5,
-          "id": "2h2i3j4k5l6m7n8o9p0q"
-        },
-        {
-          "config": "{\"name\":\"Receita por Categoria\",\"dataRoles\":[{\"name\":\"Legend\",\"query\":{\"arg\":{\"expr\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"dim_product\"}},\"Property\":\"product_category_name\"}}}}},{\"name\":\"Values\",\"query\":{\"aggregateFunction\":\"Sum\",\"arg\":{\"expr\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Olist KPIs\"}},\"Property\":\"Total Revenue\"}}}}}],\"settings\":{\"legend\":{\"show\":true,\"position\":\"Bottom\"}}}",
-          "height": 250,
-          "width": 630,
-          "x": 660,
-          "y": 150,
-          "z": 6,
-          "id": "3i3j4k5l6m7n8o9p0q1r"
-        },
-        {
-          "config": "{\"name\":\"Status de Entrega\",\"dataRoles\":[{\"name\":\"Legend\",\"query\":{\"arg\":{\"expr\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"fact_order\"}},\"Property\":\"order_status\"}}}}},{\"name\":\"Values\",\"query\":{\"aggregateFunction\":\"Count\",\"arg\":{\"expr\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"fact_order\"}},\"Property\":\"order_id\"}}}}}],\"settings\":{\"legend\":{\"show\":true}}}",
-          "height": 250,
-          "width": 630,
-          "x": 10,
-          "y": 420,
-          "z": 7,
-          "id": "4j4k5l6m7n8o9p0q1r2s"
-        },
-        {
-          "config": "{\"name\":\"Avaliação Média por Estado\",\"dataRoles\":[{\"name\":\"Category\",\"query\":{\"arg\":{\"expr\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"dim_customer\"}},\"Property\":\"customer_state\"}}}}},{\"name\":\"Values\",\"query\":{\"aggregateFunction\":\"Average\",\"arg\":{\"expr\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Olist KPIs\"}},\"Property\":\"Average Review Score\"}}}}}],\"settings\":{}}",
-          "height": 250,
-          "width": 630,
-          "x": 660,
-          "y": 420,
-          "z": 8,
-          "id": "5k5l6m7n8o9p0q1r2s3t"
-        }
-      ],
+      "visualContainers": [],
       "width": 1280.00
     },
     {
-      "config": "{\"objects\":{\"background\":[{\"properties\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#f5f5f5'\"}}}}}]}}",
+      "config": "{}",
       "displayName": "Análise de Vendas",
       "displayOption": 1,
       "filters": "[]",
       "height": 720.00,
       "name": "7a5b6c7d8e9f0g1h2i3j",
-      "visualContainers": [
-        {
-          "config": "{\"name\":\"Receita Total\",\"dataRoles\":[{\"name\":\"Values\",\"query\":{\"aggregateFunction\":\"Sum\",\"arg\":{\"expr\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Olist KPIs\"}},\"Property\":\"Total Revenue\"}}}}}]}",
-          "height": 100,
-          "width": 300,
-          "x": 10,
-          "y": 10,
-          "z": 1,
-          "id": "6l6m7n8o9p0q1r2s3t4u"
-        },
-        {
-          "config": "{\"name\":\"Ticket Médio\",\"dataRoles\":[{\"name\":\"Values\",\"query\":{\"aggregateFunction\":\"Sum\",\"arg\":{\"expr\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Olist KPIs\"}},\"Property\":\"Average Order Value\"}}}}}]}",
-          "height": 100,
-          "width": 300,
-          "x": 330,
-          "y": 10,
-          "z": 2,
-          "id": "7m7n8o9p0q1r2s3t4u5v"
-        },
-        {
-          "config": "{\"name\":\"Lucro Bruto\",\"dataRoles\":[{\"name\":\"Values\",\"query\":{\"aggregateFunction\":\"Sum\",\"arg\":{\"expr\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Olist KPIs\"}},\"Property\":\"Gross Profit\"}}}}}]}",
-          "height": 100,
-          "width": 300,
-          "x": 650,
-          "y": 10,
-          "z": 3,
-          "id": "8n8o9p0q1r2s3t4u5v6w"
-        },
-        {
-          "config": "{\"name\":\"Custo de Frete\",\"dataRoles\":[{\"name\":\"Values\",\"query\":{\"aggregateFunction\":\"Sum\",\"arg\":{\"expr\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Olist KPIs\"}},\"Property\":\"Total Shipping Cost\"}}}}}]}",
-          "height": 100,
-          "width": 300,
-          "x": 970,
-          "y": 10,
-          "z": 4,
-          "id": "9o9p0q1r2s3t4u5v6w7x"
-        },
-        {
-          "config": "{\"name\":\"Receita por Categoria (Top 10)\",\"dataRoles\":[{\"name\":\"Axis\",\"query\":{\"arg\":{\"expr\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"dim_product\"}},\"Property\":\"product_category_name\"}}}}},{\"name\":\"Values\",\"query\":{\"aggregateFunction\":\"Sum\",\"arg\":{\"expr\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Olist KPIs\"}},\"Property\":\"Total Revenue\"}}}}}],\"settings\":{\"categoryAxis\":{\"categoryType\":1}}}",
-          "height": 300,
-          "width": 640,
-          "x": 10,
-          "y": 130,
-          "z": 5,
-          "id": "0p0q1r2s3t4u5v6w7x8y"
-        },
-        {
-          "config": "{\"name\":\"Itens Vendidos por Categoria\",\"dataRoles\":[{\"name\":\"Axis\",\"query\":{\"arg\":{\"expr\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"dim_product\"}},\"Property\":\"product_category_name\"}}}}},{\"name\":\"Values\",\"query\":{\"aggregateFunction\":\"Count\",\"arg\":{\"expr\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"fact_order\"}},\"Property\":\"order_item_id\"}}}}}],\"settings\":{}}",
-          "height": 300,
-          "width": 640,
-          "x": 650,
-          "y": 130,
-          "z": 6,
-          "id": "1q1r2s3t4u5v6w7x8y9z"
-        },
-        {
-          "config": "{\"name\":\"Receita vs Frete ao Longo do Tempo\",\"dataRoles\":[{\"name\":\"Axis\",\"query\":{\"arg\":{\"expr\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"dim_time\"}},\"Property\":\"date_key\"}}}}},{\"name\":\"Values\",\"query\":{\"aggregateFunction\":\"Sum\",\"arg\":{\"expr\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Olist KPIs\"}},\"Property\":\"Total Revenue\"}}}}}],\"settings\":{}}",
-          "height": 250,
-          "width": 1260,
-          "x": 10,
-          "y": 450,
-          "z": 7,
-          "id": "2r2s3t4u5v6w7x8y9z0a"
-        }
-      ],
+      "visualContainers": [],
       "width": 1280.00
     },
     {
-      "config": "{\"objects\":{\"background\":[{\"properties\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#f5f5f5'\"}}}}}]}}",
+      "config": "{}",
       "displayName": "Análise de Clientes",
       "displayOption": 1,
       "filters": "[]",
       "height": 720.00,
       "name": "8b6c7d8e9f0g1h2i3j4k",
-      "visualContainers": [
-        {
-          "config": "{\"name\":\"Total de Clientes\",\"dataRoles\":[{\"name\":\"Values\",\"query\":{\"aggregateFunction\":\"Sum\",\"arg\":{\"expr\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Olist KPIs\"}},\"Property\":\"Unique Customers\"}}}}}]}",
-          "height": 100,
-          "width": 300,
-          "x": 10,
-          "y": 10,
-          "z": 1,
-          "id": "3s3t4u5v6w7x8y9z0a1b"
-        },
-        {
-          "config": "{\"name\":\"Pedidos por Cliente (Médio)\",\"dataRoles\":[{\"name\":\"Values\",\"query\":{\"aggregateFunction\":\"Average\",\"arg\":{\"expr\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"fact_order\"}},\"Property\":\"order_id\"}}}}}]}",
-          "height": 100,
-          "width": 300,
-          "x": 330,
-          "y": 10,
-          "z": 2,
-          "id": "4t4u5v6w7x8y9z0a1b2c"
-        },
-        {
-          "config": "{\"name\":\"Receita por Cliente (Médio)\",\"dataRoles\":[{\"name\":\"Values\",\"query\":{\"aggregateFunction\":\"Average\",\"arg\":{\"expr\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Olist KPIs\"}},\"Property\":\"Average Order Value\"}}}}}]}",
-          "height": 100,
-          "width": 300,
-          "x": 650,
-          "y": 10,
-          "z": 3,
-          "id": "5u5v6w7x8y9z0a1b2c3d"
-        },
-        {
-          "config": "{\"name\":\"Taxa de Avaliação (>=4 estrelas)\",\"dataRoles\":[{\"name\":\"Values\",\"query\":{\"aggregateFunction\":\"Sum\",\"arg\":{\"expr\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Olist KPIs\"}},\"Property\":\"Delivery Success Rate\"}}}}}]}",
-          "height": 100,
-          "width": 300,
-          "x": 970,
-          "y": 10,
-          "z": 4,
-          "id": "6v6w7x8y9z0a1b2c3d4e"
-        },
-        {
-          "config": "{\"name\":\"Clientes por Estado\",\"dataRoles\":[{\"name\":\"Location\",\"query\":{\"arg\":{\"expr\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"dim_customer\"}},\"Property\":\"customer_state\"}}}}},{\"name\":\"Values\",\"query\":{\"aggregateFunction\":\"Count\",\"arg\":{\"expr\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"dim_customer\"}},\"Property\":\"customer_id\"}}}}}],\"settings\":{}}",
-          "height": 300,
-          "width": 640,
-          "x": 10,
-          "y": 130,
-          "z": 5,
-          "id": "7w7x8y9z0a1b2c3d4e5f"
-        },
-        {
-          "config": "{\"name\":\"Receita por Estado\",\"dataRoles\":[{\"name\":\"Category\",\"query\":{\"arg\":{\"expr\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"dim_customer\"}},\"Property\":\"customer_state\"}}}}},{\"name\":\"Values\",\"query\":{\"aggregateFunction\":\"Sum\",\"arg\":{\"expr\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Olist KPIs\"}},\"Property\":\"Total Revenue\"}}}}}],\"settings\":{}}",
-          "height": 300,
-          "width": 640,
-          "x": 650,
-          "y": 130,
-          "z": 6,
-          "id": "8x8y9z0a1b2c3d4e5f6g"
-        },
-        {
-          "config": "{\"name\":\"Cidades Top 15 por Número de Clientes\",\"dataRoles\":[{\"name\":\"Axis\",\"query\":{\"arg\":{\"expr\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"dim_customer\"}},\"Property\":\"customer_city\"}}}}},{\"name\":\"Values\",\"query\":{\"aggregateFunction\":\"DistinctCount\",\"arg\":{\"expr\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"dim_customer\"}},\"Property\":\"customer_id\"}}}}}],\"settings\":{}}",
-          "height": 250,
-          "width": 1260,
-          "x": 10,
-          "y": 450,
-          "z": 7,
-          "id": "9y9z0a1b2c3d4e5f6g7h"
-        }
-      ],
+      "visualContainers": [],
       "width": 1280.00
     },
     {
-      "config": "{\"objects\":{\"background\":[{\"properties\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#f5f5f5'\"}}}}}]}}",
+      "config": "{}",
       "displayName": "Análise de Produtos",
       "displayOption": 1,
       "filters": "[]",
       "height": 720.00,
       "name": "9c7d8e9f0g1h2i3j4k5l",
-      "visualContainers": [
-        {
-          "config": "{\"name\":\"Total de Produtos\",\"dataRoles\":[{\"name\":\"Values\",\"query\":{\"aggregateFunction\":\"Sum\",\"arg\":{\"expr\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Olist KPIs\"}},\"Property\":\"Unique Products Sold\"}}}}}]}",
-          "height": 100,
-          "width": 300,
-          "x": 10,
-          "y": 10,
-          "z": 1,
-          "id": "0z0a1b2c3d4e5f6g7h8i"
-        },
-        {
-          "config": "{\"name\":\"Preço Médio do Produto\",\"dataRoles\":[{\"name\":\"Values\",\"query\":{\"aggregateFunction\":\"Average\",\"arg\":{\"expr\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Olist KPIs\"}},\"Property\":\"Average Item Price\"}}}}}]}",
-          "height": 100,
-          "width": 300,
-          "x": 330,
-          "y": 10,
-          "z": 2,
-          "id": "1a1b2c3d4e5f6g7h8i9j"
-        },
-        {
-          "config": "{\"name\":\"Avaliação Média de Produtos\",\"dataRoles\":[{\"name\":\"Values\",\"query\":{\"aggregateFunction\":\"Average\",\"arg\":{\"expr\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Olist KPIs\"}},\"Property\":\"Average Review Score\"}}}}}]}",
-          "height": 100,
-          "width": 300,
-          "x": 650,
-          "y": 10,
-          "z": 3,
-          "id": "2b2c3d4e5f6g7h8i9j0k"
-        },
-        {
-          "config": "{\"name\":\"Itens Totais Vendidos\",\"dataRoles\":[{\"name\":\"Values\",\"query\":{\"aggregateFunction\":\"Sum\",\"arg\":{\"expr\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Olist KPIs\"}},\"Property\":\"Total Items Sold\"}}}}}]}",
-          "height": 100,
-          "width": 300,
-          "x": 970,
-          "y": 10,
-          "z": 4,
-          "id": "3c3d4e5f6g7h8i9j0k1l"
-        },
-        {
-          "config": "{\"name\":\"Receita por Categoria (Detalhado)\",\"dataRoles\":[{\"name\":\"Axis\",\"query\":{\"arg\":{\"expr\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"dim_product\"}},\"Property\":\"product_category_name\"}}}}},{\"name\":\"Values\",\"query\":{\"aggregateFunction\":\"Sum\",\"arg\":{\"expr\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Olist KPIs\"}},\"Property\":\"Total Revenue\"}}}}}],\"settings\":{}}",
-          "height": 300,
-          "width": 640,
-          "x": 10,
-          "y": 130,
-          "z": 5,
-          "id": "4d4e5f6g7h8i9j0k1l2m"
-        },
-        {
-          "config": "{\"name\":\"Avaliação por Categoria\",\"dataRoles\":[{\"name\":\"Category\",\"query\":{\"arg\":{\"expr\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"dim_product\"}},\"Property\":\"product_category_name\"}}}}},{\"name\":\"Values\",\"query\":{\"aggregateFunction\":\"Average\",\"arg\":{\"expr\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Olist KPIs\"}},\"Property\":\"Average Review Score\"}}}}}],\"settings\":{}}",
-          "height": 300,
-          "width": 640,
-          "x": 650,
-          "y": 130,
-          "z": 6,
-          "id": "5e5f6g7h8i9j0k1l2m3n"
-        },
-        {
-          "config": "{\"name\":\"Peso Médio e Dimensões por Categoria\",\"dataRoles\":[{\"name\":\"Axis\",\"query\":{\"arg\":{\"expr\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"dim_product\"}},\"Property\":\"product_category_name\"}}}}},{\"name\":\"Values\",\"query\":{\"aggregateFunction\":\"Average\",\"arg\":{\"expr\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"dim_product\"}},\"Property\":\"product_weight_g\"}}}}}],\"settings\":{}}",
-          "height": 250,
-          "width": 1260,
-          "x": 10,
-          "y": 450,
-          "z": 7,
-          "id": "6f6g7h8i9j0k1l2m3n4o"
-        }
-      ],
+      "visualContainers": [],
       "width": 1280.00
     },
     {
-      "config": "{\"objects\":{\"background\":[{\"properties\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#f5f5f5'\"}}}}}]}}",
+      "config": "{}",
       "displayName": "Análise de Vendedores e Logística",
       "displayOption": 1,
       "filters": "[]",
       "height": 720.00,
       "name": "0d8e9f0g1h2i3j4k5l6m",
-      "visualContainers": [
-        {
-          "config": "{\"name\":\"Total de Vendedores\",\"dataRoles\":[{\"name\":\"Values\",\"query\":{\"aggregateFunction\":\"Sum\",\"arg\":{\"expr\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Olist KPIs\"}},\"Property\":\"Unique Sellers\"}}}}}]}",
-          "height": 100,
-          "width": 300,
-          "x": 10,
-          "y": 10,
-          "z": 1,
-          "id": "7g7h8i9j0k1l2m3n4o5p"
-        },
-        {
-          "config": "{\"name\":\"Custo de Frete Total\",\"dataRoles\":[{\"name\":\"Values\",\"query\":{\"aggregateFunction\":\"Sum\",\"arg\":{\"expr\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Olist KPIs\"}},\"Property\":\"Total Shipping Cost\"}}}}}]}",
-          "height": 100,
-          "width": 300,
-          "x": 330,
-          "y": 10,
-          "z": 2,
-          "id": "8h8i9j0k1l2m3n4o5p6q"
-        },
-        {
-          "config": "{\"name\":\"Taxa de Sucesso de Entrega\",\"dataRoles\":[{\"name\":\"Values\",\"query\":{\"aggregateFunction\":\"Sum\",\"arg\":{\"expr\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Olist KPIs\"}},\"Property\":\"Delivery Success Rate\"}}}}}]}",
-          "height": 100,
-          "width": 300,
-          "x": 650,
-          "y": 10,
-          "z": 3,
-          "id": "9i9j0k1l2m3n4o5p6q7r"
-        },
-        {
-          "config": "{\"name\":\"Frete Médio por Pedido\",\"dataRoles\":[{\"name\":\"Values\",\"query\":{\"aggregateFunction\":\"Average\",\"arg\":{\"expr\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"fact_order\"}},\"Property\":\"shipping_cost\"}}}}}]}",
-          "height": 100,
-          "width": 300,
-          "x": 970,
-          "y": 10,
-          "z": 4,
-          "id": "0j0k1l2m3n4o5p6q7r8s"
-        },
-        {
-          "config": "{\"name\":\"Distribuição de Status de Entrega\",\"dataRoles\":[{\"name\":\"Legend\",\"query\":{\"arg\":{\"expr\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"fact_order\"}},\"Property\":\"order_status\"}}}}},{\"name\":\"Values\",\"query\":{\"aggregateFunction\":\"Count\",\"arg\":{\"expr\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"fact_order\"}},\"Property\":\"order_id\"}}}}}],\"settings\":{}}",
-          "height": 300,
-          "width": 640,
-          "x": 10,
-          "y": 130,
-          "z": 5,
-          "id": "1k1l2m3n4o5p6q7r8s9t"
-        },
-        {
-          "config": "{\"name\":\"Custo de Frete por Categoria\",\"dataRoles\":[{\"name\":\"Axis\",\"query\":{\"arg\":{\"expr\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"dim_product\"}},\"Property\":\"product_category_name\"}}}}},{\"name\":\"Values\",\"query\":{\"aggregateFunction\":\"Sum\",\"arg\":{\"expr\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"fact_order\"}},\"Property\":\"shipping_cost\"}}}}}],\"settings\":{}}",
-          "height": 300,
-          "width": 640,
-          "x": 650,
-          "y": 130,
-          "z": 6,
-          "id": "2l2m3n4o5p6q7r8s9t0u"
-        },
-        {
-          "config": "{\"name\":\"Pedidos por Vendedor (Top 10)\",\"dataRoles\":[{\"name\":\"Axis\",\"query\":{\"arg\":{\"expr\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"dim_seller\"}},\"Property\":\"seller_id\"}}}}},{\"name\":\"Values\",\"query\":{\"aggregateFunction\":\"Count\",\"arg\":{\"expr\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"fact_order\"}},\"Property\":\"order_id\"}}}}}],\"settings\":{}}",
-          "height": 250,
-          "width": 1260,
-          "x": 10,
-          "y": 450,
-          "z": 7,
-          "id": "3m3n4o5p6q7r8s9t0u1v"
-        }
-      ],
+      "visualContainers": [],
       "width": 1280.00
     }
   ]
