@@ -1,0 +1,123 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
+  "name": "delivery_pie",
+  "position": {
+    "x": 10,
+    "y": 300,
+    "z": 5,
+    "height": 280,
+    "width": 400,
+    "tabOrder": 5
+  },
+  "visual": {
+    "visualType": "pieChart",
+    "query": {
+      "queryState": {
+        "Legend": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_order"
+                    }
+                  },
+                  "Property": "order_status"
+                }
+              },
+              "queryRef": "fact_order.order_status",
+              "nativeQueryRef": "order_status"
+            }
+          ]
+        },
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Olist KPIs"
+                    }
+                  },
+                  "Property": "Total Orders"
+                }
+              },
+              "queryRef": "Olist KPIs.Total Orders",
+              "nativeQueryRef": "Total Orders"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Olist KPIs"
+                  }
+                },
+                "Property": "Total Orders"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "drillFilterOtherVisuals": true,
+    "objects": {
+      "dataPoint": [
+        {
+          "properties": {
+            "fill": {
+              "expr": {
+                "Literal": {
+                  "Value": "'#FF006E'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "delivered"
+          }
+        },
+        {
+          "properties": {
+            "fill": {
+              "expr": {
+                "Literal": {
+                  "Value": "'#00F5FF'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "shipped"
+          }
+        },
+        {
+          "properties": {
+            "fill": {
+              "expr": {
+                "Literal": {
+                  "Value": "'#39FF14'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "processing"
+          }
+        }
+      ]
+    }
+  },
+  "filterConfig": {
+    "filters": []
+  }
+}
