@@ -25,7 +25,16 @@
       "filters": "[]",
       "height": 720.00,
       "name": "64f8ba5008d182089cb0",
-      "visualContainers": [],
+      "visualContainers": [
+        {"config": "{}", "height": 100, "width": 280, "x": 10, "y": 10, "z": 1, "id": "kpi1"},
+        {"config": "{}", "height": 100, "width": 280, "x": 300, "y": 10, "z": 2, "id": "kpi2"},
+        {"config": "{}", "height": 100, "width": 280, "x": 590, "y": 10, "z": 3, "id": "kpi3"},
+        {"config": "{}", "height": 100, "width": 280, "x": 880, "y": 10, "z": 4, "id": "kpi4"},
+        {"config": "{}", "height": 280, "width": 630, "x": 10, "y": 130, "z": 5, "id": "chart1"},
+        {"config": "{}", "height": 280, "width": 630, "x": 650, "y": 130, "z": 6, "id": "chart2"},
+        {"config": "{}", "height": 280, "width": 630, "x": 10, "y": 430, "z": 7, "id": "chart3"},
+        {"config": "{}", "height": 280, "width": 630, "x": 650, "y": 430, "z": 8, "id": "chart4"}
+      ],
       "width": 1280.00
     },
     {
@@ -35,7 +44,11 @@
       "filters": "[]",
       "height": 720.00,
       "name": "7a5b6c7d8e9f0g1h2i3j",
-      "visualContainers": [],
+      "visualContainers": [
+        {"config": "{}", "height": 350, "width": 1260, "x": 10, "y": 10, "z": 1, "id": "revenue_trend"},
+        {"config": "{}", "height": 340, "width": 620, "x": 10, "y": 370, "z": 2, "id": "revenue_category"},
+        {"config": "{}", "height": 340, "width": 620, "x": 640, "y": 370, "z": 3, "id": "items_sold"}
+      ],
       "width": 1280.00
     },
     {
@@ -45,7 +58,11 @@
       "filters": "[]",
       "height": 720.00,
       "name": "8b6c7d8e9f0g1h2i3j4k",
-      "visualContainers": [],
+      "visualContainers": [
+        {"config": "{}", "height": 350, "width": 1260, "x": 10, "y": 10, "z": 1, "id": "customers_state"},
+        {"config": "{}", "height": 340, "width": 620, "x": 10, "y": 370, "z": 2, "id": "revenue_state"},
+        {"config": "{}", "height": 340, "width": 620, "x": 640, "y": 370, "z": 3, "id": "top_cities"}
+      ],
       "width": 1280.00
     },
     {
@@ -55,7 +72,11 @@
       "filters": "[]",
       "height": 720.00,
       "name": "9c7d8e9f0g1h2i3j4k5l",
-      "visualContainers": [],
+      "visualContainers": [
+        {"config": "{}", "height": 350, "width": 1260, "x": 10, "y": 10, "z": 1, "id": "revenue_category_detail"},
+        {"config": "{}", "height": 340, "width": 620, "x": 10, "y": 370, "z": 2, "id": "rating_category"},
+        {"config": "{}", "height": 340, "width": 620, "x": 640, "y": 370, "z": 3, "id": "weight_category"}
+      ],
       "width": 1280.00
     },
     {
@@ -65,7 +86,11 @@
       "filters": "[]",
       "height": 720.00,
       "name": "0d8e9f0g1h2i3j4k5l6m",
-      "visualContainers": [],
+      "visualContainers": [
+        {"config": "{}", "height": 350, "width": 630, "x": 10, "y": 10, "z": 1, "id": "delivery_status"},
+        {"config": "{}", "height": 350, "width": 630, "x": 650, "y": 10, "z": 2, "id": "shipping_cost_category"},
+        {"config": "{}", "height": 340, "width": 1260, "x": 10, "y": 370, "z": 3, "id": "top_sellers"}
+      ],
       "width": 1280.00
     }
   ]
