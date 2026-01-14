@@ -1,0 +1,122 @@
+table fact_order
+	lineageTag: e50f54ea-f03e-45d3-b41c-5e3e5e2881f0
+	sourceLineageTag: 4f1d9c91-eace-49c2-ab55-3dd3206cb531
+
+	column order_id
+		dataType: string
+		lineageTag: b88d6f46-109e-44cf-bdee-ec4830a76743
+		sourceLineageTag: 197f1b68-baba-4f6a-8e24-6e819193d6a0
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: order_id
+
+		annotation SummarizationSetBy = User
+
+	column order_item_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 33a3252e-bbf1-4f28-b346-01b74daeab27
+		sourceLineageTag: d8b686e6-7abe-4f5d-9da0-b56c806c8f2a
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: order_item_id
+
+		annotation SummarizationSetBy = User
+
+	column product_id
+		dataType: string
+		lineageTag: 7acfc45d-ceef-4c65-bc7a-05bb8ee6bfdf
+		sourceLineageTag: 359a6aaa-d3e7-40a6-ba90-d4bd6295c8e2
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: product_id
+
+		annotation SummarizationSetBy = User
+
+	column seller_id
+		dataType: string
+		lineageTag: 114cbb7b-fcdc-4a12-a937-3a306d4e1777
+		sourceLineageTag: 7473420a-0d4f-427b-b089-a96845d654c7
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: seller_id
+
+		annotation SummarizationSetBy = User
+
+	column customer_id
+		dataType: string
+		lineageTag: ddf504b7-c8d2-4ee4-8184-fcc561329663
+		sourceLineageTag: 2e9af3d6-af44-4ff9-8289-41ffd57e7883
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: customer_id
+
+		annotation SummarizationSetBy = User
+
+	column order_date_key
+		dataType: dateTime
+		formatString: General Number
+		lineageTag: 920c02f2-1ebc-40fa-9894-4f9e47b62266
+		sourceLineageTag: a41e685a-ab70-4bf9-8a68-b85f8807f74f
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: order_date_key
+
+		annotation SummarizationSetBy = User
+
+	column order_status
+		dataType: string
+		lineageTag: 496dd0ef-e4cd-4929-8da1-bb682a3337db
+		sourceLineageTag: cffb2225-f857-4f55-9e01-bde0c2e4597b
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: order_status
+
+		annotation SummarizationSetBy = User
+
+	column item_price
+		dataType: double
+		lineageTag: f8b80002-84df-4c73-88db-c27cc380bddc
+		sourceLineageTag: badb8c96-c7fd-4161-9657-220bcfc4a258
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: item_price
+
+		annotation SummarizationSetBy = User
+
+	column shipping_cost
+		dataType: double
+		lineageTag: fe748566-28de-49cd-ad7a-9da21030e8e7
+		sourceLineageTag: 5fde8314-7aad-47b6-8ae8-18d67d7a7ddc
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: shipping_cost
+
+		annotation SummarizationSetBy = User
+
+	column review_score
+		dataType: string
+		lineageTag: 49adf858-bdaa-4bcb-8362-8f0d88f33a06
+		sourceLineageTag: 93563296-492a-4d33-ac66-3219e4467b7b
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: review_score
+
+		annotation SummarizationSetBy = User
+
+	column review_comment
+		dataType: string
+		lineageTag: a1acc28a-dd15-4ef5-97f8-6dcdc0932eef
+		sourceLineageTag: c188830c-a783-40a1-aa14-6c5f33c113a4
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: review_comment
+
+		annotation SummarizationSetBy = User
+
+	partition fact_order = entity
+		mode: directQuery
+		source
+			entityName: fact_order
+			expressionSource: 'DirectQuery para AS – semantic olist'
+

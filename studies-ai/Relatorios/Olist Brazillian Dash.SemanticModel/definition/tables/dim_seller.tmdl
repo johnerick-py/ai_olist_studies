@@ -1,0 +1,52 @@
+table dim_seller
+	lineageTag: bf78d471-5966-4a68-8f75-41532a73e82e
+	sourceLineageTag: 3213e06f-f6be-448c-a05b-d8481634e26d
+
+	column seller_id
+		dataType: string
+		isNullable: false
+		lineageTag: 20f46e41-3e26-49c1-afca-fea926d39faf
+		sourceLineageTag: 7d3a44aa-af15-40df-aa52-72abfda458e7
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: seller_id
+
+		annotation SummarizationSetBy = User
+
+	column seller_city
+		dataType: string
+		lineageTag: 55798130-94a5-480d-ab61-76929a9d4879
+		sourceLineageTag: f4f88eb7-15bc-4afe-a2fc-fd0dff9ea693
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: seller_city
+
+		annotation SummarizationSetBy = User
+
+	column seller_state
+		dataType: string
+		lineageTag: f1942cc7-b043-41e0-afc8-0fe43083c8cd
+		sourceLineageTag: 52de6e75-e307-4770-b093-4483578fd7c2
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: seller_state
+
+		annotation SummarizationSetBy = User
+
+	column seller_zip_code_prefix
+		dataType: int64
+		formatString: 0
+		lineageTag: fbe7b524-b748-4df8-a705-f00ff2d8a811
+		sourceLineageTag: 9dcb9cf7-1140-44a2-868b-50fd9be1c628
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: seller_zip_code_prefix
+
+		annotation SummarizationSetBy = User
+
+	partition dim_seller = entity
+		mode: directQuery
+		source
+			entityName: dim_seller
+			expressionSource: 'DirectQuery para AS – semantic olist'
+

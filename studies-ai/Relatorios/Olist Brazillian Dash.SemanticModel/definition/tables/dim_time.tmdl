@@ -1,0 +1,77 @@
+table dim_time
+	lineageTag: 1fd1c1e2-bfda-4d5b-81e4-8983a7f01998
+	sourceLineageTag: dd020a92-69eb-4baa-a537-3e73695d4089
+
+	column date_key
+		dataType: dateTime
+		isNullable: false
+		formatString: General Number
+		lineageTag: 19364491-0234-49a2-9310-2bf3cbc2010b
+		sourceLineageTag: 650abff0-b0ce-4b59-9586-38aab644dcf9
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: date_key
+
+		annotation SummarizationSetBy = User
+
+	column year
+		dataType: int64
+		formatString: 0
+		lineageTag: 052a6a57-77f1-4bb5-a807-2270666fd4cc
+		sourceLineageTag: a8c2170b-ab7a-4ba2-9afc-21123d7fd15f
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: year
+
+		annotation SummarizationSetBy = User
+
+	column month
+		dataType: int64
+		formatString: 0
+		lineageTag: b77838b0-2236-444b-a934-c71e6ccf7e89
+		sourceLineageTag: ca6dc286-a144-4075-af52-38042177319d
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: month
+
+		annotation SummarizationSetBy = User
+
+	column day
+		dataType: int64
+		formatString: 0
+		lineageTag: 1760db08-8e59-4f23-bb13-5c6732fb2910
+		sourceLineageTag: c96e423e-3d02-4cf5-b569-95a7a654ccf0
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: day
+
+		annotation SummarizationSetBy = User
+
+	column week
+		dataType: int64
+		formatString: 0
+		lineageTag: 7541e8c0-576d-4a3f-a413-e8d0fc795e89
+		sourceLineageTag: 17145978-1577-4986-9204-a3648c581947
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: week
+
+		annotation SummarizationSetBy = User
+
+	column day_of_week
+		dataType: int64
+		formatString: 0
+		lineageTag: b8553f2a-f769-4f6a-8381-25382b653e23
+		sourceLineageTag: 8db2f33d-4798-4661-85a3-41f04e447909
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: day_of_week
+
+		annotation SummarizationSetBy = User
+
+	partition dim_time = entity
+		mode: directQuery
+		source
+			entityName: dim_time
+			expressionSource: 'DirectQuery para AS – semantic olist'
+

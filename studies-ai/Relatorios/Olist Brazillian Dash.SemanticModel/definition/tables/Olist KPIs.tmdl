@@ -1,0 +1,76 @@
+/// Grupo de medidas analíticas do modelo Olist
+table 'Olist KPIs'
+	lineageTag: d7eb981b-cf1f-41d6-914f-523c4ace7e98
+
+	/// Número total de pedidos únicos
+	measure 'Total Orders' = DISTINCTCOUNT(fact_order[order_id])
+		displayFolder: Volume
+		lineageTag: 484a8fcd-7414-48ec-980f-6b9c36534c86
+
+	/// Receita total de vendas
+	measure 'Total Revenue' = SUMX(fact_order, fact_order[item_price])
+		displayFolder: Financial | Revenue
+		lineageTag: ed434713-1556-47f5-aa18-81d0e488848b
+
+	/// Número de clientes únicos
+	measure 'Unique Customers' = DISTINCTCOUNT(fact_order[customer_id])
+		displayFolder: Volume
+		lineageTag: b7054aed-e1cb-4b47-b29c-4a7b43870302
+
+	/// Número de vendedores únicos
+	measure 'Unique Sellers' = DISTINCTCOUNT(fact_order[seller_id])
+		displayFolder: Volume
+		lineageTag: f93ba23c-038c-4767-8331-f7181cb772c5
+
+	/// Número de produtos únicos vendidos
+	measure 'Unique Products Sold' = DISTINCTCOUNT(fact_order[product_id])
+		displayFolder: Volume
+		lineageTag: e73f3aa9-4d62-4576-bcb6-4ebcc58e3ca2
+
+	/// Número total de itens vendidos
+	measure 'Total Items Sold' = COUNTA(fact_order[order_item_id])
+		displayFolder: Volume
+		lineageTag: 39523096-f683-4be7-836f-b20a0d27631c
+
+	/// Lucro bruto (receita - frete)
+	measure 'Gross Profit' = [Total Revenue] - [Total Shipping Cost]
+		displayFolder: Financial | Profit
+		lineageTag: d3fe41df-ecd6-422f-a9eb-45db1c23e74b
+
+	/// Valor médio por pedido
+	measure 'Average Order Value' = DIVIDE([Total Revenue], [Total Orders])
+		displayFolder: Performance | Averages
+		lineageTag: ce72acb1-0cc3-4d0a-9592-05b9e89e8408
+
+	/// Preço médio por item
+	measure 'Average Item Price' = DIVIDE([Total Revenue], [Total Items Sold])
+		displayFolder: Performance | Averages
+		lineageTag: 8f99f78d-8712-4473-8226-85f2836fa43c
+
+	/// Margem de lucro bruta (lucro/receita)
+	measure 'Gross Margin %' = DIVIDE([Gross Profit], [Total Revenue])
+		formatString: 0%
+		displayFolder: Performance | Margins
+		lineageTag: d5a6763b-c405-402b-8b5b-f2e6dc3e6905
+
+	/// Percentual de pedidos entregues com sucesso
+	measure 'Delivery Success Rate' = DIVIDE(CALCULATE(COUNTROWS(fact_order), fact_order[order_status]="delivered"), [Total Orders])
+		displayFolder: Performance | Quality
+		lineageTag: b4c0eebb-766f-4b00-b911-171c0c4ae3ce
+
+	/// Nota média de avaliação dos produtos
+	measure 'Average Review Score' = AVERAGEX(fact_order, VALUE(fact_order[review_score]))
+		displayFolder: Performance | Quality
+		lineageTag: 917833a9-8b6f-4b13-94b2-2a51ad63e620
+
+	/// Custo total com frete
+	measure 'Total Shipping Cost' = SUM(fact_order[shipping_cost])
+		displayFolder: Financial | Costs
+		lineageTag: f77e3912-c300-49bd-8511-a1640b21c2df
+
+	partition 'Olist KPIs' = calculated
+		mode: import
+		source = Row()
+
+	annotation 436ba87b-9c83-4389-a31b-ebd06a36be98 = {"Expression":""}
+

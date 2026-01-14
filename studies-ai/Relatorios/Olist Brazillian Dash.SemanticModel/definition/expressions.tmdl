@@ -1,0 +1,11 @@
+expression 'DirectQuery para AS – semantic olist' =
+		let
+		    Source = AnalysisServices.Database("powerbi://api.powerbi.com/v1.0/c91d481c-40b4-4ff9-8f2e-a00df534d8b7/studies-ai", "semantic olist"),
+		    Cubes = Table.Combine(Source[Data]),
+		    Cube = Cubes{[Id="Model", Kind="Cube"]}[Data]
+		in
+		    Cube
+	lineageTag: 39f6d56b-0697-437c-9a70-49bd94203b3b
+
+	annotation PBI_IncludeFutureArtifacts = True
+

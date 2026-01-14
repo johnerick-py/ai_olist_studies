@@ -1,0 +1,62 @@
+table dim_customer
+	lineageTag: 6ca01854-215c-48cc-9883-f453b5306a7e
+	sourceLineageTag: 13c39d8c-fa10-4ebe-93fa-5c050e16f9b7
+
+	column customer_id
+		dataType: string
+		isNullable: false
+		lineageTag: 991f3b4d-1ca2-4089-8a40-fb8ece1c46d0
+		sourceLineageTag: b7c6ff86-6ce3-46d4-af6b-afa03a78e890
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: customer_id
+
+		annotation SummarizationSetBy = User
+
+	column customer_unique_id
+		dataType: string
+		lineageTag: 71c27216-6da8-4511-8cae-9ad822aa58e4
+		sourceLineageTag: c91295f6-c134-478c-a08e-89cb0242d514
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: customer_unique_id
+
+		annotation SummarizationSetBy = User
+
+	column customer_city
+		dataType: string
+		lineageTag: 1dba292e-0633-4ad1-bfd4-b7d496a22d17
+		sourceLineageTag: 5c47d4c1-7f19-4526-b60f-a982b263f423
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: customer_city
+
+		annotation SummarizationSetBy = User
+
+	column customer_state
+		dataType: string
+		lineageTag: ec68f2c6-c556-41da-8c18-28de1bb08777
+		sourceLineageTag: 738614bc-9c83-4fdc-877a-56f2118beabc
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: customer_state
+
+		annotation SummarizationSetBy = User
+
+	column customer_zip_code_prefix
+		dataType: int64
+		formatString: 0
+		lineageTag: 43ef435c-cca7-42fe-9775-8e1c2ab4577b
+		sourceLineageTag: 52b0d824-5ad2-4880-9db7-989d6674d3cc
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: customer_zip_code_prefix
+
+		annotation SummarizationSetBy = User
+
+	partition dim_customer = entity
+		mode: directQuery
+		source
+			entityName: dim_customer
+			expressionSource: 'DirectQuery para AS – semantic olist'
+

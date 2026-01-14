@@ -1,0 +1,23 @@
+model Model
+	culture: pt-BR
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: pt-BR
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBI_QueryOrder = ["DirectQuery para AS – semantic olist"]
+
+annotation PBI_ProTooling = ["MCP-PBIModeling"]
+
+ref table dim_customer
+ref table dim_seller
+ref table dim_time
+ref table fact_order
+ref table dim_product
+ref table 'Olist KPIs'
+
+ref cultureInfo pt-BR
+

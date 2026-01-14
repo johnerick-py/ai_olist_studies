@@ -1,0 +1,108 @@
+table dim_product
+	lineageTag: 89762cb0-21db-4d49-b9b0-75c336f2c66a
+	sourceLineageTag: 0220f9f3-d001-43a8-9042-4a87fbd7610d
+
+	column product_id
+		dataType: string
+		isNullable: false
+		lineageTag: 38897973-e79a-4842-8767-25c9fe3d0ecd
+		sourceLineageTag: b0268618-dccd-4ded-ac31-5f3b7b9f1ec9
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: product_id
+
+		annotation SummarizationSetBy = User
+
+	column product_category_name
+		dataType: string
+		lineageTag: c5cca54e-d677-4624-9751-f3c921f81c09
+		sourceLineageTag: 5b462761-5eef-4b16-9f2e-1c1b00166e1f
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: product_category_name
+
+		annotation SummarizationSetBy = User
+
+	column product_name_length
+		dataType: int64
+		formatString: 0
+		lineageTag: 37f2c69b-e67a-4ee0-8c83-7c97a0a30139
+		sourceLineageTag: a86892b7-8c8d-4d5d-904b-6b2ffb5ac7b9
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: product_name_length
+
+		annotation SummarizationSetBy = User
+
+	column product_description_length
+		dataType: int64
+		formatString: 0
+		lineageTag: 15c68610-ef85-4295-84d1-94e233f8c2c1
+		sourceLineageTag: 625221fa-b31d-4e22-bfcd-8effc1316e50
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: product_description_length
+
+		annotation SummarizationSetBy = User
+
+	column product_photos_qty
+		dataType: int64
+		formatString: 0
+		lineageTag: d5510cb5-9dde-4a65-9f0f-09c08b305122
+		sourceLineageTag: 9a1c41aa-c892-436e-905f-0c05d7c63933
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: product_photos_qty
+
+		annotation SummarizationSetBy = User
+
+	column product_weight_g
+		dataType: int64
+		formatString: 0
+		lineageTag: dcb624b3-9ef0-4523-8eeb-79ae69beb88d
+		sourceLineageTag: 7cdbf99b-bb75-4484-b48c-94bf4457c7b8
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: product_weight_g
+
+		annotation SummarizationSetBy = User
+
+	column product_length_cm
+		dataType: int64
+		formatString: 0
+		lineageTag: be532285-09c4-4700-83a0-96c6d285c8d1
+		sourceLineageTag: f7e9e2d6-a75c-4c2f-b429-799a10d08029
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: product_length_cm
+
+		annotation SummarizationSetBy = User
+
+	column product_height_cm
+		dataType: int64
+		formatString: 0
+		lineageTag: eec46769-7516-4a2c-9f52-d6989a77efab
+		sourceLineageTag: bce94a50-9b27-4d3d-8878-fadfe6ad64bc
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: product_height_cm
+
+		annotation SummarizationSetBy = User
+
+	column product_width_cm
+		dataType: int64
+		formatString: 0
+		lineageTag: 3a1f5b9f-44b8-45e1-ac3e-75037d0a324c
+		sourceLineageTag: cf9c6c0f-9342-4503-8206-ab85f710d93e
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: product_width_cm
+
+		annotation SummarizationSetBy = User
+
+	partition dim_product = entity
+		mode: directQuery
+		source
+			entityName: dim_product
+			expressionSource: 'DirectQuery para AS – semantic olist'
+
