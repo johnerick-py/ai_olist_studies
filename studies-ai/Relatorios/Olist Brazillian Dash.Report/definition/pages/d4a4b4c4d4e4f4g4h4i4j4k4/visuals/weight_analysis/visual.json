@@ -47,8 +47,7 @@
               "queryRef": "dim_product.product_weight_g",
               "nativeQueryRef": "product_weight_g"
             }
-          ],
-          "aggregationFunction": "Average"
+          ]
         }
       },
       "sortDefinition": {
