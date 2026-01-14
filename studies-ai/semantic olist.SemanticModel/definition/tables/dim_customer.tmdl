@@ -1,0 +1,57 @@
+table dim_customer
+	lineageTag: 13c39d8c-fa10-4ebe-93fa-5c050e16f9b7
+	sourceLineageTag: [olist_dimensional].[dim_customer]
+
+	column customer_id
+		dataType: string
+		lineageTag: b7c6ff86-6ce3-46d4-af6b-afa03a78e890
+		sourceLineageTag: customer_id
+		summarizeBy: none
+		sourceColumn: customer_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column customer_unique_id
+		dataType: string
+		lineageTag: c91295f6-c134-478c-a08e-89cb0242d514
+		sourceLineageTag: customer_unique_id
+		summarizeBy: none
+		sourceColumn: customer_unique_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column customer_city
+		dataType: string
+		lineageTag: 5c47d4c1-7f19-4526-b60f-a982b263f423
+		sourceLineageTag: customer_city
+		summarizeBy: none
+		sourceColumn: customer_city
+
+		annotation SummarizationSetBy = Automatic
+
+	column customer_state
+		dataType: string
+		lineageTag: 738614bc-9c83-4fdc-877a-56f2118beabc
+		sourceLineageTag: customer_state
+		summarizeBy: none
+		sourceColumn: customer_state
+
+		annotation SummarizationSetBy = Automatic
+
+	column customer_zip_code_prefix
+		dataType: int64
+		formatString: 0
+		lineageTag: 52b0d824-5ad2-4880-9db7-989d6674d3cc
+		sourceLineageTag: customer_zip_code_prefix
+		summarizeBy: none
+		sourceColumn: customer_zip_code_prefix
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dim_customer = entity
+		mode: directLake
+		source
+			entityName: dim_customer
+			schemaName: olist_dimensional
+			expressionSource: 'DirectLake - olist_brazillian'
+

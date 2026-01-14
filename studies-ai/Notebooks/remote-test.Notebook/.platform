@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Notebook",
+    "displayName": "remote-test"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "336dda36-85f0-b87c-427c-ac26602937da"
+  }
+}

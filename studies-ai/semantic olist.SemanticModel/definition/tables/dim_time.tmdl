@@ -1,0 +1,71 @@
+table dim_time
+	lineageTag: dd020a92-69eb-4baa-a537-3e73695d4089
+	sourceLineageTag: [olist_dimensional].[dim_time]
+
+	column date_key
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 650abff0-b0ce-4b59-9586-38aab644dcf9
+		sourceLineageTag: date_key
+		summarizeBy: none
+		sourceColumn: date_key
+
+		annotation SummarizationSetBy = Automatic
+
+	column year
+		dataType: int64
+		formatString: 0
+		lineageTag: a8c2170b-ab7a-4ba2-9afc-21123d7fd15f
+		sourceLineageTag: year
+		summarizeBy: none
+		sourceColumn: year
+
+		annotation SummarizationSetBy = Automatic
+
+	column month
+		dataType: int64
+		formatString: 0
+		lineageTag: ca6dc286-a144-4075-af52-38042177319d
+		sourceLineageTag: month
+		summarizeBy: none
+		sourceColumn: month
+
+		annotation SummarizationSetBy = Automatic
+
+	column day
+		dataType: int64
+		formatString: 0
+		lineageTag: c96e423e-3d02-4cf5-b569-95a7a654ccf0
+		sourceLineageTag: day
+		summarizeBy: none
+		sourceColumn: day
+
+		annotation SummarizationSetBy = Automatic
+
+	column week
+		dataType: int64
+		formatString: 0
+		lineageTag: 17145978-1577-4986-9204-a3648c581947
+		sourceLineageTag: week
+		summarizeBy: none
+		sourceColumn: week
+
+		annotation SummarizationSetBy = Automatic
+
+	column day_of_week
+		dataType: int64
+		formatString: 0
+		lineageTag: 8db2f33d-4798-4661-85a3-41f04e447909
+		sourceLineageTag: day_of_week
+		summarizeBy: none
+		sourceColumn: day_of_week
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dim_time = entity
+		mode: directLake
+		source
+			entityName: dim_time
+			schemaName: olist_dimensional
+			expressionSource: 'DirectLake - olist_brazillian'
+

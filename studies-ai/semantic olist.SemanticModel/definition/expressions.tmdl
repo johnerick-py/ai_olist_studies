@@ -1,0 +1,11 @@
+expression 'DirectLake - olist_brazillian' =
+		let
+		    Source = AzureStorage.DataLake("https://onelake.dfs.fabric.microsoft.com/a2e2c08a-bec5-448a-8d2e-14304dd272e9/6e1f0e8f-9477-434d-9ff3-34bfb94f7b83", [HierarchicalNavigation=true])
+		in
+		    Source
+	lineageTag: 6d735256-d496-4658-86d2-10dc52dc5ebf
+
+	annotation PBI_IncludeFutureArtifacts = False
+
+	annotation PBI_RemovedChildren = [{"remoteItemId":{"analysisServicesObject":{"sourceName":null,"sourceLineageTag":"[raw_olist].[olist_orders_dataset]"}},"objectType":"Table"},{"remoteItemId":{"analysisServicesObject":{"sourceName":null,"sourceLineageTag":"[raw_olist].[product_category_name_translation]"}},"objectType":"Table"},{"remoteItemId":{"analysisServicesObject":{"sourceName":null,"sourceLineageTag":"[raw_olist].[olist_products_dataset]"}},"objectType":"Table"},{"remoteItemId":{"analysisServicesObject":{"sourceName":null,"sourceLineageTag":"[raw_olist].[olist_order_items_dataset]"}},"objectType":"Table"},{"remoteItemId":{"analysisServicesObject":{"sourceName":null,"sourceLineageTag":"[raw_olist].[olist_order_payments_dataset]"}},"objectType":"Table"},{"remoteItemId":{"analysisServicesObject":{"sourceName":null,"sourceLineageTag":"[raw_olist].[olist_customers_dataset]"}},"objectType":"Table"},{"remoteItemId":{"analysisServicesObject":{"sourceName":null,"sourceLineageTag":"[raw_olist].[olist_sellers_dataset]"}},"objectType":"Table"},{"remoteItemId":{"analysisServicesObject":{"sourceName":null,"sourceLineageTag":"[raw_olist].[olist_geolocation_dataset]"}},"objectType":"Table"},{"remoteItemId":{"analysisServicesObject":{"sourceName":null,"sourceLineageTag":"[raw_olist].[olist_order_reviews_dataset]"}},"objectType":"Table"}]
+

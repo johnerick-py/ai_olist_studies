@@ -1,0 +1,17 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/variableLibrary/definition/variables/1.0.0/schema.json",
+  "variables": [
+    {
+      "name": "KAGGLE_USERNAME",
+      "note": "",
+      "type": "String",
+      "value": "johndataex"
+    },
+    {
+      "name": "KAGGLE_KEY",
+      "note": "",
+      "type": "String",
+      "value": "KGAT_0e102123e74eae852aa04043a08f7e2d"
+    }
+  ]
+}

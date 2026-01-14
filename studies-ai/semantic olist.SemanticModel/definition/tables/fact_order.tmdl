@@ -1,0 +1,116 @@
+table fact_order
+	lineageTag: 4f1d9c91-eace-49c2-ab55-3dd3206cb531
+	sourceLineageTag: [olist_dimensional].[fact_order]
+
+	column order_id
+		dataType: string
+		lineageTag: 197f1b68-baba-4f6a-8e24-6e819193d6a0
+		sourceLineageTag: order_id
+		summarizeBy: none
+		sourceColumn: order_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column order_item_id
+		dataType: int64
+		formatString: 0
+		lineageTag: d8b686e6-7abe-4f5d-9da0-b56c806c8f2a
+		sourceLineageTag: order_item_id
+		summarizeBy: sum
+		sourceColumn: order_item_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column product_id
+		dataType: string
+		lineageTag: 359a6aaa-d3e7-40a6-ba90-d4bd6295c8e2
+		sourceLineageTag: product_id
+		summarizeBy: none
+		sourceColumn: product_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column seller_id
+		dataType: string
+		lineageTag: 7473420a-0d4f-427b-b089-a96845d654c7
+		sourceLineageTag: seller_id
+		summarizeBy: none
+		sourceColumn: seller_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column customer_id
+		dataType: string
+		lineageTag: 2e9af3d6-af44-4ff9-8289-41ffd57e7883
+		sourceLineageTag: customer_id
+		summarizeBy: none
+		sourceColumn: customer_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column order_date_key
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: a41e685a-ab70-4bf9-8a68-b85f8807f74f
+		sourceLineageTag: order_date_key
+		summarizeBy: none
+		sourceColumn: order_date_key
+
+		annotation SummarizationSetBy = Automatic
+
+	column order_status
+		dataType: string
+		lineageTag: cffb2225-f857-4f55-9e01-bde0c2e4597b
+		sourceLineageTag: order_status
+		summarizeBy: none
+		sourceColumn: order_status
+
+		annotation SummarizationSetBy = Automatic
+
+	column item_price
+		dataType: double
+		lineageTag: badb8c96-c7fd-4161-9657-220bcfc4a258
+		sourceLineageTag: item_price
+		summarizeBy: sum
+		sourceColumn: item_price
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column shipping_cost
+		dataType: double
+		lineageTag: 5fde8314-7aad-47b6-8ae8-18d67d7a7ddc
+		sourceLineageTag: shipping_cost
+		summarizeBy: sum
+		sourceColumn: shipping_cost
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column review_score
+		dataType: string
+		lineageTag: 93563296-492a-4d33-ac66-3219e4467b7b
+		sourceLineageTag: review_score
+		summarizeBy: none
+		sourceColumn: review_score
+
+		annotation SummarizationSetBy = Automatic
+
+	column review_comment
+		dataType: string
+		lineageTag: c188830c-a783-40a1-aa14-6c5f33c113a4
+		sourceLineageTag: review_comment
+		summarizeBy: none
+		sourceColumn: review_comment
+
+		annotation SummarizationSetBy = Automatic
+
+	partition fact_order = entity
+		mode: directLake
+		source
+			entityName: fact_order
+			schemaName: olist_dimensional
+			expressionSource: 'DirectLake - olist_brazillian'
+
